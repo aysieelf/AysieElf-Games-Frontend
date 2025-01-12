@@ -16,7 +16,7 @@
 
 ### 1️⃣ Initial Setup & Early Deployment (1 week)
 - [x] Choose technical stack
-- [ ] Create GitHub repository
+- [x] Create GitHub repository
 - [ ] Basic project structure:
   ```
   aysieelf-games/
@@ -26,6 +26,7 @@
   │   └── health-check/  # Basic endpoint
   └── docs/             
   ```
+- [ ] Venv, Lint
 - [ ] Minimal deployments:
   - Frontend (Vercel): Coming soon page
   - Backend (Railway): Health check endpoint
@@ -34,7 +35,7 @@
 ### 2️⃣ Backend Foundation (2 weeks)
 - [ ] FastAPI base structure
 - [ ] Database setup & migrations:
-  ```sql
+  ```
   users
     - id, username, email, avatar
     - created_at, last_login
