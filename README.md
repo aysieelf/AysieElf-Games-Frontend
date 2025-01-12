@@ -12,6 +12,17 @@
 - WebSocket: FastAPI WebSockets
 - State Management: Redis (за multiplayer sessions)
 
+## Current progress
+[▓░░░░░░░░░░░░░░░░░░░] 0%
+- [ ] [Initial Setup & Early Deployment (deadline: 19.01.2025)](#1-initial-setup--early-deployment-1-week)
+- [ ] [Backend Foundation (deadline: 02.02.2025)](#2-backend-foundation-2-weeks)
+- [ ] [Social Features (deadline: 16.02.2025)](#3-social-features-2-weeks)
+- [ ] [Game Integration Base (deadline: 02.03.2025)](#4-game-integration-base-2-weeks)
+- [ ] [First Game Port - Sleepy Fox (deadline: 23.03.2025)](#5-first-game-port---sleepy-fox-3-weeks)
+- [ ] [Multiplayer Foundation (deadline: 06.04.2025)](#6-multiplayer-foundation-2-седмици)
+- [ ] [UI/UX Development (deadline: 20.04.2025)](#7-uiux-development-2-седмици)
+- [ ] [Polish & Launch (deadline: 27.04.2025)](#8-polish--launch-1-week)
+
 ## 🗺️ Project Phases
 
 ### 1️⃣ Initial Setup & Early Deployment (1 week)
@@ -85,21 +96,21 @@
 - [ ] In-game leaderboard
 - [ ] Save progress
 
-### 6️⃣ Multiplayer Foundation (2 седмици)
+### 6️⃣ Multiplayer Foundation (2 weeks)
 - [ ] WebSocket setup
 - [ ] Game room system
 - [ ] Player matching
 - [ ] Connection handling
 - [ ] State synchronization
 
-### 7️⃣ UI/UX Development (2 седмици)
+### 7️⃣ UI/UX Development (2 weeks)
 - [ ] Home page with favorites
 - [ ] Friend activity feed
 - [ ] Game lobby system
 - [ ] Profile customization
 - [ ] Responsive design
 
-### 8️⃣ Polish & Launch (1 седмица)
+### 8️⃣ Polish & Launch (1 week)
 - [ ] Performance optimization
 - [ ] Documentation
 - [ ] Testing
