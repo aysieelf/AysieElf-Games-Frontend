@@ -1,14 +1,15 @@
 html, body, #root {
   margin: 0;
   padding: 0;
-  background-color: theme('colors.gaming.dark');
+  background-color: theme('colors.cozy.cream');
   min-height: 100vh;
   width: 100%;
 }
 
 .glass-panel {
-  background: theme('colors.gaming.glass');
-  backdrop-filter: blur(10px);
-  border: 1px solid theme('colors.gaming.neon-blue');
-  box-shadow: 0 0 10px theme('colors.gaming.glow');
+  background: theme('colors.cozy.frost');
+  backdrop-filter: blur(8px);
+  border: 1px solid theme('colors.cozy.shell');
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
