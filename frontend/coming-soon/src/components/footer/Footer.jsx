@@ -3,12 +3,12 @@ function Footer() {
     <footer className="py-8 px-8">
       <div className="cozy-container flex justify-center gap-8">
         <a href="https://github.com/aysieelf"
-           className="font-cozy text-cozy-text-soft hover:text-cozy-leaf-dark
+           className="font-display text-cozy-text-soft hover:text-cozy-leaf-dark
                     transition-all duration-300 hover-lift">
           GitHub
         </a>
         <a href="https://linkedin.com/in/aysieelf"
-           className="font-cozy text-cozy-text-soft hover:text-cozy-leaf-dark
+           className="font-display text-cozy-text-soft hover:text-cozy-leaf-dark
                     transition-all duration-300 hover-lift">
           LinkedIn
         </a>
