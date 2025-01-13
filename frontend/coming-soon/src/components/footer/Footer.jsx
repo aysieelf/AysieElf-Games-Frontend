@@ -1,13 +1,15 @@
 function Footer() {
   return (
-    <footer className="py-6 px-8">
-      <div className="flex justify-center gap-8">
+    <footer className="py-8 px-8">
+      <div className="cozy-container flex justify-center gap-8">
         <a href="https://github.com/aysieelf"
-           className="font-bubble text-gaming-text-dim hover:text-gaming-neon-blue transition-colors">
+           className="font-cozy text-cozy-text-soft hover:text-cozy-leaf-dark
+                    transition-all duration-300 hover-lift">
           GitHub
         </a>
         <a href="https://linkedin.com/in/aysieelf"
-           className="font-bubble text-gaming-text-dim hover:text-gaming-neon-blue transition-colors">
+           className="font-cozy text-cozy-text-soft hover:text-cozy-leaf-dark
+                    transition-all duration-300 hover-lift">
           LinkedIn
         </a>
       </div>
