@@ -1,16 +1,75 @@
 html, body, #root {
   margin: 0;
   padding: 0;
-  background-color: theme('colors.gaming.dark');
+  background-color: theme('colors.cozy.cream');
   min-height: 100vh;
   width: 100%;
 }
 
 .glass-panel {
-  background: theme('colors.gaming.glass');
-  backdrop-filter: blur(10px);
-  border: 1px solid theme('colors.gaming.neon-blue');
-  box-shadow: 0 0 10px theme('colors.gaming.glow');
+  background: theme('colors.cozy.frost');
+  backdrop-filter: blur(8px);
+  border: 1px solid theme('colors.cozy.shell');
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+/* Utilities */
+@layer components {
+  /* Containers */
+  .cozy-card {
+    @apply bg-cozy-shell p-6 rounded-2xl shadow-sm;
+  }
+  
+  .cozy-container {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Text styles */
+  .cozy-title {
+    @apply font-display text-cozy-text-dark text-2xl md:text-3xl;
+  }
+  
+  .cozy-text {
+    @apply font-primary text-cozy-text-soft;
+  }
+
+  /* Buttons */
+  .cozy-button {
+    @apply px-4 py-2 rounded-xl 
+           bg-cozy-mint hover:bg-cozy-hover 
+           transition-colors duration-200
+           font-cozy text-cozy-text-dark;
+  }
+
+  /* Animated elements */
+  .plant-sway {
+    @apply animate-sway origin-bottom;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-1;
+  }
+
+  /* Decorative elements */
+  .pixel-border {
+    @apply font-pixel border-2 border-cozy-leaf-dark p-2;
+  }
+  
+  .soft-shadow {
+    @apply shadow-[0_4px_12px_rgba(0,0,0,0.05)];
+  }
+}
+
+/* Optional global styles */
+@layer base {
+  body {
+    @apply font-primary text-cozy-text-dark antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
 }
 
 @tailwind base;
