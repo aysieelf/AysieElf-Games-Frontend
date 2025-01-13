@@ -36,10 +36,7 @@
   └── docs/             
   ```
 - [ ] Venv, Lint
-- [ ] Minimal deployments:
-  - Frontend (Vercel): Coming soon page
-  - Backend (Railway): Health check endpoint
-  - Database (Railway): Initial PostgreSQL setup
+- [ ] Minimal deployments
 
 ### 2️⃣ Backend Foundation (2 weeks)
 - [ ] FastAPI base structure
