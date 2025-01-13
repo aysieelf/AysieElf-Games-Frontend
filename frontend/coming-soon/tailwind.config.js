@@ -12,7 +12,7 @@ export default {
           'peach': '#FFE3E1',
           'rose': '#FFD1D1',
           'dusty': '#FF9494',
-          'text': '#635985',
+          'text': '#2F3640',
         }
       },
       fontFamily: {
