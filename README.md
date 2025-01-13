@@ -1,14 +1,12 @@
 # 🎮 AysieElf Games Plan
 
 ## 📚 Technical Stack
-- Frontend: React.js + Phaser.js
+- Frontend: React.js + Phaser.js (+ JavaScript Bridge?)
 - Backend: Python FastAPI
 - Database: PostgreSQL
 - ORM: SQLAlchemy
 - Authentication: JWT tokens
-- Deployment: 
-  - Frontend: Vercel
-  - Backend + DB: Railway
+- Deployment: Heroku
 - WebSocket: FastAPI WebSockets
 - State Management: Redis (за multiplayer sessions)
 
