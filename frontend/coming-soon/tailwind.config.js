@@ -8,15 +8,15 @@ export default {
     extend: {
       colors: {
         'cozy': {
-          'cream': '#FFF5E4',
-          'peach': '#FFE3E1',
-          'rose': '#FFD1D1',
-          'dusty': '#FF9494',
-          'text': '#2F3640',
+          'bg': '#1A1B26',
+          'darker': '#16161E',
+          'accent': '#FFB5D0',
+          'text': '#A9B1D6',
+          'highlight': '#92B4FF'
         }
       },
       fontFamily: {
-        'pixel': ['"Press Start 2P"', 'cursive'],
+        'pixel': ['"VT323"', 'monospace'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
