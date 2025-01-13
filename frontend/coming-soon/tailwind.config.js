@@ -37,19 +37,41 @@ export default {
         }
       },
       fontFamily: {
-          'pixel': ['VT323', 'monospace'],
-          'old': ['Press Start 2P', 'cursive'],
-          'bubble': ['Bubblegum Sans', 'monospace'],
+        // Gaming & Pixel art
+        'pixel': ['VT323', 'monospace'], // for pixel art
+
+        // Main fonts
+        'primary': ['Quicksand', 'sans-serif'],  // main text
+        'display': ['Varela Round', 'sans-serif'],  // for headers
+
+        // Accent fonts
+        'cozy': ['Jost', 'sans-serif'],  // for buttons
+        'cute': ['Comfortaa', 'sans-serif'],  // for accents
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
+        'sway': 'sway 4s ease-in-out infinite',
+        'breathe': 'breathe 3s ease-in-out infinite',
+        'fadeIn': 'fadeIn 0.6s ease-in',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '50%': { transform: 'translateY(-10px)' }, // gently floating the text
         },
-      },
+        sway: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(3deg)' },      // slowly swaying the plants
+        },
+        breathe: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.03)' },       // pulse effect
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(5px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      }
     },
   },
   plugins: [],
