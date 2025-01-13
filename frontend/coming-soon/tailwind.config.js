@@ -41,12 +41,12 @@ export default {
         'pixel': ['VT323', 'monospace'], // for pixel art
 
         // Main fonts
-        'primary': ['Quicksand', 'sans-serif'],  // main text
-        'display': ['Varela Round', 'sans-serif'],  // for headers
+        'primary': ['Brush Script MT', 'cursive'],  // for main text
+        'display': ['Courier New', 'monospace'],    // for titles
 
         // Accent fonts
-        'cozy': ['Jost', 'sans-serif'],  // for buttons
-        'cute': ['Comfortaa', 'sans-serif'],  // for accents
+        'cozy': ['Caveat', 'cursive'],  // for decorative text
+        'cute': ['Shadows Into Light', 'cursive'],  // for decorative text
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
