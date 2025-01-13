@@ -2,13 +2,11 @@ import { useState } from 'react'
 import Header from './components/header/Header.jsx'
 import './App.css'
 import Hero from "./components/hero/Hero.jsx";
-import Footer from "./components/hero/Footer.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-      <div>
+      <div className="min-h-screen flex flex-col bg-cozy-bg">
           <Header />
           <Hero />
           <Footer />
