@@ -16,7 +16,7 @@ export default {
         }
       },
       fontFamily: {
-          'sans': ['Poppins', 'sans-serif'],
+          'pixel': ['"Press Start 2P"', 'cursive'],
       },
     },
   },
