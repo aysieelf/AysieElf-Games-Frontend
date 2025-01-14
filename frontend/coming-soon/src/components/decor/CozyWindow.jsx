@@ -1,11 +1,52 @@
-const CozyWindow = () => (
-  <div className="fixed top-0 right-0 w-64 h-64 p-4">
-    <div className="glass-panel h-full">
-      <div className="bg-cozy-sky-blue h-full rounded-xl relative overflow-hidden">
-        <div className="absolute animate-float">☁️</div>
-        <div className="absolute right-8 top-12 animate-float" style={{animationDelay: '2s'}}>☁️</div>
-      </div>
+const CozyWindow = ({ children }) => (
+  <div className="relative h-16 border-4 border-[#DEB887]">
+    <div className="absolute inset-0 bg-[#B4D4E7] overflow-hidden">
+      {/* Common clouds */}
+      <img
+        src="/assets/clouds/cloud.png"
+        alt=""
+        className="absolute -left-28 top-2 animate-moveCloud opacity-90"
+      />
+      <img
+        src="/assets/clouds/cloud.png"
+        alt=""
+        className="absolute -left-28 top-6 animate-moveCloud opacity-75"
+        style={{animationDelay: '20s'}}
+      />
+      <img
+        src="/assets/clouds/cloud.png"
+        alt=""
+        className="absolute -left-28 top-1 animate-moveCloud opacity-85"
+        style={{animationDelay: '40s'}}
+      />
+      <img
+        src="/assets/clouds/cloud.png"
+        alt=""
+        className="absolute -left-28 top-8 animate-moveCloud opacity-80"
+        style={{animationDelay: '60s'}}
+      />
+      <img
+        src="/assets/clouds/cloud.png"
+        alt=""
+        className="absolute -left-28 top-3 animate-moveCloud opacity-70"
+        style={{animationDelay: '80s'}}
+      />
+      <img
+        src="/assets/clouds/cloud.png"
+        alt=""
+        className="absolute -left-28 top-5 animate-moveCloud opacity-85"
+        style={{animationDelay: '100s'}}
+      />
+
+      {/* Special cloud */}
+      <img
+        src="/assets/clouds/special-cloud.png"
+        alt=""
+        className="absolute -left-28 top-4 animate-moveCloud opacity-95"
+        style={{animationDelay: '120s'}}
+      />
     </div>
+    {children}
   </div>
 );
 
