@@ -1,4 +1,5 @@
 from datetime import datetime
+
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
@@ -14,9 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/health", status_code=200)
 async def health_check():
-    return {
-        "status": "ok",
-        "time_stamp": datetime.now().isoformat()
-    }
+    return {"status": "ok", "time_stamp": datetime.now().isoformat()}
