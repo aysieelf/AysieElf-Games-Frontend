@@ -8,10 +8,10 @@
 - Authentication: JWT tokens
 - Deployment: Heroku
 - WebSocket: FastAPI WebSockets
-- State Management: Redis (за multiplayer sessions)
+- State Management: Redis (for multiplayer sessions)
 
 ## Current progress
-[▓░░░░░░░░░░░░░░░░░░░] 0%
+[▓░░░░░░░░░░░░░░░░░░░] 0/8%
 - [ ] [Initial Setup & Early Deployment (deadline: 19.01.2025)](#1-initial-setup--early-deployment-1-week)
 - [ ] [Backend Foundation (deadline: 02.02.2025)](#2-backend-foundation-2-weeks)
 - [ ] [Social Features (deadline: 16.02.2025)](#3-social-features-2-weeks)
@@ -26,7 +26,7 @@
 ### 1️⃣ Initial Setup & Early Deployment (1 week)
 - [x] Choose technical stack
 - [x] Create GitHub repository
-- [ ] Basic project structure:
+- [x] Basic project structure:
   ```
   aysieelf-games/
   ├── frontend/          
@@ -36,6 +36,7 @@
   └── docs/             
   ```
 - [ ] Venv, Lint
+- [ ] Healthcheck endpoint
 - [ ] Minimal deployments
 
 ### 2️⃣ Backend Foundation (2 weeks)
