@@ -35,8 +35,8 @@
   │   └── health-check/  # Basic endpoint
   └── docs/             
   ```
-- [ ] Venv, Lint
-- [ ] Healthcheck endpoint
+- [x] Venv, Lint
+- [x] Healthcheck endpoint
 - [ ] Minimal deployments
 
 ### 2️⃣ Backend Foundation (2 weeks)
