@@ -23,6 +23,7 @@ for env_path in possible_env_paths:
         load_dotenv(env_path)
         break
 
+
 # Define the settings class with all the environment variables
 class Settings(BaseSettings):
     # prefix for the API
@@ -36,7 +37,6 @@ class Settings(BaseSettings):
 
     # Development mode / Production mode
     DEBUG: bool = os.getenv("DEBUG", "false").lower() in ["true", "1"]
-
 
     @field_validator("CORS_ALLOWED_HOSTS", check_fields=False)
     def assemble_cors_origins(cls, v: Union[str, List[str]]) -> Union[List[str], str]:
@@ -124,6 +124,7 @@ class Settings(BaseSettings):
             _env_file_encoding="utf-8",
         )
 
+
 # Cache the settings to avoid reading the environment variables multiple times
 @lru_cache()
 def get_settings() -> Settings:
@@ -131,5 +132,6 @@ def get_settings() -> Settings:
         return Settings.from_heroku()
     else:
         return Settings.from_env()
+
 
 settings = get_settings()

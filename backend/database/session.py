@@ -7,7 +7,9 @@ from src.models.base import Base
 engine = create_engine(
     settings.DATABASE_URL,
     echo=settings.DEBUG,  # only if DEBUG = True
-    connect_args={"options": "-c timezone=UTC"} if "postgresql" in settings.DATABASE_URL else {}
+    connect_args=(
+        {"options": "-c timezone=UTC"} if "postgresql" in settings.DATABASE_URL else {}
+    ),
 )
 
 # create a session - current transaction

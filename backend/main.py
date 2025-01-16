@@ -1,15 +1,11 @@
 from contextlib import asynccontextmanager
-from datetime import datetime
-
-import uvicorn
-from fastapi import FastAPI, APIRouter
-from starlette.middleware.cors import CORSMiddleware
 
 from database.session import init_db
-from src.core.config import Settings, settings
+from fastapi import APIRouter, FastAPI
 from src.api.v1.routes import api_router
-
-
+from src.core.config import Settings, settings
+from starlette.middleware.cors import CORSMiddleware
+import uvicorn
 
 
 class App:
