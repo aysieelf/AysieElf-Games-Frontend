@@ -44,4 +44,4 @@ Welcome to the frontend repository of AysieElf Games! This is where the magic ha
    ```
 
 ## 📊 Frontend Progress
-[▓░░░░░░░░░░░░░░░░░░░] (3%) 2/63
+[▓▓▓░░░░░░░░░░░░░░░░░] (18%) 13/73
