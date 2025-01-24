@@ -5,6 +5,7 @@ import CozyCorner from "./components/decor/CozySocials.jsx";
 import PlantDecor from "./components/decor/PlantDecor.jsx";
 import Login from "./components/hero/Login.jsx";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Floor from "./components/decor/Floor.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               }/>
                 <Route path={"/login"} element={
                     <div className="min-h-screen relative overflow-hidden">
+                        <Floor/>
                         <CozyCorner/>
                         <PlantDecor/>
 
