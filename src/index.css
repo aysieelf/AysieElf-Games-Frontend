@@ -27,11 +27,7 @@ html, body, #root {
 
   /* Text styles */
   .cozy-title {
-    @apply font-display text-cozy-text-dark text-2xl md:text-3xl;
-  }
-  
-  .cozy-text {
-    @apply font-primary text-cozy-text-soft;
+    @apply font-courier_new text-cozy-text-dark text-2xl md:text-3xl;
   }
 
   /* Buttons */
@@ -39,7 +35,7 @@ html, body, #root {
     @apply px-4 py-2 rounded-xl 
            bg-cozy-mint hover:bg-cozy-hover 
            transition-colors duration-200
-           font-cozy text-cozy-text-dark;
+           font-courier_new text-cozy-text-dark;
   }
 
   /* Animated elements */
@@ -64,11 +60,11 @@ html, body, #root {
 /* Optional global styles */
 @layer base {
   body {
-    @apply font-primary text-cozy-text-dark antialiased;
+    @apply font-courier_new text-cozy-text-dark antialiased;
   }
   
   h1, h2, h3, h4 {
-    @apply font-display;
+    @apply font-courier_new;
   }
 }
 
