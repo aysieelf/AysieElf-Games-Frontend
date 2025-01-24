@@ -30,7 +30,7 @@ const CozySocials = () => {
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-cozy-frost backdrop-blur-sm px-3 py-2 rounded-lg
                               shadow-sm border border-cozy-shell flex items-center gap-2">
-                  <span className="text-sm font-display">GitHub</span>
+                  <span className="text-sm font-courier_new">GitHub</span>
                 </div>
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2
                               border-4 border-transparent border-t-cozy-shell"></div>
@@ -50,7 +50,7 @@ const CozySocials = () => {
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-cozy-frost backdrop-blur-sm px-3 py-2 rounded-lg
                               shadow-sm border border-cozy-shell flex items-center gap-2">
-                  <span className="text-sm font-display">LinkedIn</span>
+                  <span className="text-sm font-courier_new">LinkedIn</span>
                 </div>
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2
                               border-4 border-transparent border-t-cozy-shell"></div>
