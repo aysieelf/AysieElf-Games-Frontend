@@ -9,7 +9,7 @@ function Hero() {
       <div className="max-w-md p-8 rounded-xl glass-panel animate-float relative"
            style={{ animationDelay: '1s' }}>
 
-        <p className="font-display text-xl text-cozy-text-dark text-center leading-relaxed">
+        <p className="font-courier_new text-xl text-cozy-text-dark text-center leading-relaxed">
           This is a cozy place for my pixel art games. Stay tuned! 🌿
         </p>
       </div>
