@@ -15,6 +15,7 @@ export default {
           // accents
           'mint': '#A8D1C8',      // fresh, calming mint green
           'dusty-rose': '#E7B7C8', // soft pink, not too sweet
+          'pastel-rose': '#F4D9E3', // lighter pink for highlights
           'warm-wood': '#C4A484',  // natural wooden accents
           'sky-blue': '#B4D4E7',   // fresh blue, like window views
 
@@ -29,7 +30,9 @@ export default {
 
           // text colors
           'text-dark': '#5C4033',  // warm brown for main text
+          'text-mid-brown': '#7A5A4B', // mid-tone brown for variety
           'text-soft': '#8B7355',  // softer brown for secondary text
+          'text-light': '#BAA892',  // light brown for highlights
 
           // interactive elements
           'hover': '#FFE4E1',     // slightly warmer on hover
@@ -39,14 +42,7 @@ export default {
       fontFamily: {
         // Gaming & Pixel art
         'pixel': ['VT323', 'monospace'], // for pixel art
-
-        // Main fonts
-        'primary': ['Brush Script MT', 'cursive'],  // for main text
-        'display': ['Courier New', 'monospace'],    // for titles
-
-        // Accent fonts
-        'cozy': ['Caveat', 'cursive'],  // for decorative text
-        'cute': ['Shadows Into Light', 'cursive'],  // for decorative text
+        'courier_new': ['Courier New', 'monospace'],    // for titles
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
