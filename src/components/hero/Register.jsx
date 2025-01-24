@@ -14,6 +14,9 @@ const Register = () => {
   });
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const isFormValid = formData.username.trim() &&
+                     formData.email.trim() &&
+                     formData.password.trim();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -72,16 +75,18 @@ const Register = () => {
                 value={formData.username}
                 onChange={handleChange}
                 placeholder="username"
+                required
                 className="w-full px-4 py-2 bg-white bg-opacity-80 rounded-lg border border-gray-300 focus:gray-100 focus:ring-2 focus:ring-cozy-cream outline-none transition-colors duration-200"
             />
           </div>
           <div>
             <input
-                type="text"
+                type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="email"
+                required
                 className="w-full px-4 py-2 bg-white bg-opacity-80 rounded-lg border border-gray-300 focus:gray-100 focus:ring-2 focus:ring-cozy-cream outline-none transition-colors duration-200"
             />
           </div>
@@ -92,6 +97,7 @@ const Register = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="password"
+                required
                 className="w-full px-4 py-2 bg-white bg-opacity-80 rounded-lg border border-gray-300 focus:gray-100 focus:ring-2 focus:ring-cozy-cream outline-none transition-colors duration-200 mb-8"
             />
             <button
@@ -123,8 +129,12 @@ const Register = () => {
 
             <button
                 type="submit"
-                disabled={isLoading}
-                className="flex-1 px-6 py-2 bg-cozy-text-mid-brown text-gray-200 rounded-lg hover:bg-cozy-text-light hover:text-gray-700 transition-colors duration-200"
+                disabled={isLoading || !isFormValid}
+                className={`flex-1 px-6 py-2 rounded-lg transition-colors duration-200 ${
+                  isFormValid 
+                    ? "bg-cozy-text-mid-brown text-gray-200 hover:bg-cozy-text-light hover:text-gray-700"
+                    : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                }`}
             >
               {isLoading ? 'LOADING...' : 'REGISTER'}
             </button>
