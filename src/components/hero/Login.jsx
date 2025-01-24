@@ -13,6 +13,8 @@ const Login = () => {
   });
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const isFormValid = formData.username.trim() && formData.password.trim();
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,6 +72,7 @@ const Login = () => {
                 value={formData.username}
                 onChange={handleChange}
                 placeholder="username"
+                required
                 className="w-full px-4 py-2 bg-white bg-opacity-80 rounded-lg border border-gray-300 focus:gray-100 focus:ring-2 focus:ring-cozy-cream outline-none transition-colors duration-200"
             />
           </div>
@@ -80,6 +83,7 @@ const Login = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="password"
+                required
                 className="w-full px-4 py-2 bg-white bg-opacity-80 rounded-lg border border-gray-300 focus:gray-100 focus:ring-2 focus:ring-cozy-cream outline-none transition-colors duration-200 mb-8"
             />
             <button
@@ -102,19 +106,23 @@ const Login = () => {
 
           <div className="flex gap-4">
             <button
-                type="submit"
-                disabled={isLoading}
-                className="flex-1 px-6 py-2 bg-cozy-text-mid-brown text-gray-200 rounded-lg hover:bg-cozy-text-light hover:text-gray-700 transition-colors duration-200"
+                type="button"
+                onClick={() => navigate('/register')}
+                className="flex-1 px-6 py-2 bg-transparent border-2 border-cozy-text-mid-brown text-cozy-text-mid-brown rounded-lg hover:bg-cozy-text-mid-brown hover:text-gray-200 transition-colors duration-200"
             >
-              {isLoading ? 'LOADING...' : 'LOGIN'}
+              REGISTER
             </button>
 
             <button
-                type="button"
-                onClick={() => navigate('/register')}
-                className="flex-1 px-6 py-2 bg-cozy-text-mid-brown text-gray-200 rounded-lg hover:bg-cozy-text-light hover:text-gray-700 transition-colors duration-200"
+                type="submit"
+                disabled={isLoading || !isFormValid}
+                className={`flex-1 px-6 py-2 rounded-lg transition-colors duration-200 ${
+                  isFormValid 
+                    ? "bg-cozy-text-mid-brown text-gray-200 hover:bg-cozy-text-light hover:text-gray-700"
+                    : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                }`}
             >
-              REGISTER
+              {isLoading ? 'LOADING...' : 'LOGIN'}
             </button>
           </div>
         </form>
