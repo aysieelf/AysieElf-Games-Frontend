@@ -48,7 +48,11 @@ const Register = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.detail || 'Registration failed');
+        throw new Error(
+          typeof errorData.detail === 'object'
+            ? errorData.detail[0].msg
+            : errorData.detail || 'Registration failed'
+        );
       }
 
       const data = await response.json();
