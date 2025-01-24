@@ -1,6 +1,6 @@
 const CozySocials = () => {
   return (
-    <div className="fixed bottom-4 right-4">
+    <div className="fixed bottom-4 right-4 z-[100]">
       <div className="relative w-48">
         <img
           src="/assets/corner/table.png"
@@ -15,16 +15,15 @@ const CozySocials = () => {
         />
       </div>
 
-      {/* Separate container for links, positioned absolutely over the table */}
-      <div className="absolute bottom-[120px] left-2"> {/* Adjust these values to position cups */}
-        <div className="flex gap-6"> {/* Adjust gap-6 to control space between cups */}
+      <div className="absolute bottom-[120px] left-2">
+        <div className="flex gap-6">
           {/* GitHub */}
           <div className="relative">
             <a href="https://github.com/aysieelf" className="block group">
               <img
                 src="/assets/corner/github-cup.png"
                 alt="GitHub"
-                className="w-9 hover-lift transition-transform duration-300"
+                className="w-9 transform transition-transform duration-300 hover:-translate-y-1"
               />
               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -44,7 +43,7 @@ const CozySocials = () => {
               <img
                 src="/assets/corner/linkedin-cup.png"
                 alt="LinkedIn"
-                className="w-9 hover-lift transition-transform duration-300"
+                className="w-9 transform transition-transform duration-300 hover:-translate-y-1" // Заменяме hover-lift
               />
               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
