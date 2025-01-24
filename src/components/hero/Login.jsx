@@ -25,7 +25,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await fetch('/api/v1/auth/login', {
+      const response = await fetch('https://aysieelf-games-api-c2eb044503c3.herokuapp.com/api/v1/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -34,18 +34,19 @@ const Login = () => {
           username: formData.username,
           password: formData.password,
         }),
+        credentials: 'include',
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.detail || 'Login failed');
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Login failed');
       }
 
-      // Store the token
+      const data = await response.json();
       localStorage.setItem('token', data.access_token);
       navigate('/dashboard');
     } catch (err) {
+      console.error('Login error:', err);
       setError(err.message);
     } finally {
       setIsLoading(false);
