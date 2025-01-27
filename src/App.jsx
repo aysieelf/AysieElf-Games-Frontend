@@ -7,6 +7,7 @@ import PlantDecor from "./components/decor/PlantDecor.jsx";
 import Login from "./components/hero/Login.jsx";
 import Floor from "./components/decor/Floor.jsx";
 import Register from "./components/hero/Register.jsx";
+import { AuthProvider } from './contexts/AuthContext';
 
 const Layout = () => {
   return (
@@ -24,18 +25,20 @@ const Layout = () => {
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="relative">
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Hero />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-          </Route>
-        </Routes>
-        <CozySocials />
-      </div>
-    </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <div className="relative">
+            <Routes>
+              <Route element={<Layout />}>
+                <Route path="/" element={<Hero />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+              </Route>
+            </Routes>
+            <CozySocials />
+          </div>
+        </BrowserRouter>
+    </AuthProvider>
   );
 }
 
