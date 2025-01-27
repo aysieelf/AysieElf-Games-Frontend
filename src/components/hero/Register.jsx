@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { API_URL } from '../../config/api';
+import { useAuth } from '../../contexts/AuthContext';
+import api from '../../api/axios';
 import { Eye, EyeOff } from 'lucide-react';
 
 
@@ -17,6 +18,7 @@ const Register = () => {
   const isFormValid = formData.username.trim() &&
                      formData.email.trim() &&
                      formData.password.trim();
+  const { setToken } = useAuth();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,34 +35,17 @@ const Register = () => {
     setError('');
 
     try {
-      const response = await fetch(`${API_URL}/api/v1/auth/register`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username: formData.username,
-          email: formData.email,
-          password: formData.password,
-        }),
-        credentials: 'include',
+      const response = await api.post('/auth/register', {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(
-          typeof errorData.detail === 'object'
-            ? errorData.detail[0].msg
-            : errorData.detail || 'Registration failed'
-        );
-      }
-
-      const data = await response.json();
-      localStorage.setItem('token', data.access_token);
+      setToken(response.data.access_token);
       navigate('/dashboard');
     } catch (err) {
       console.error('Registration error:', err);
-      setError(err.message);
+      setError(err.response?.data?.detail || 'Registration failed');
     } finally {
       setIsLoading(false);
     }
