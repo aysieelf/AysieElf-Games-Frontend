@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { API_URL } from '../../config/api';
 import { Eye, EyeOff } from 'lucide-react';
+import {useAuth} from "../../contexts/AuthContext.jsx";
+import api from '../../api/axios.js';
 
 
 const Login = () => {
@@ -14,6 +15,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const isFormValid = formData.username.trim() && formData.password.trim();
+    const { setToken } = useAuth();
 
 
   const handleChange = (e) => {
@@ -25,35 +27,30 @@ const Login = () => {
     setError('');
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setError('');
 
     try {
-      const response = await fetch(`${API_URL}/api/v1/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
+      const response = await api.post('/auth/login',
+        new URLSearchParams({
           username: formData.username,
           password: formData.password,
         }),
-        credentials: 'include',
-      });
+        {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        }
+      );
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.detail || 'Login failed');
-      }
-
-      const data = await response.json();
-      localStorage.setItem('token', data.access_token);
+      setToken(response.data.access_token);
       navigate('/dashboard');
     } catch (err) {
       console.error('Login error:', err);
-      setError(err.message);
+      setError(err.response?.data?.detail || 'Login failed');
     } finally {
       setIsLoading(false);
     }
